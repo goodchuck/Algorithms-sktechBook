@@ -1,3 +1,5 @@
+// 1,2,3 더하기
+
 var fs = require('fs');
 // var input = fs.readFileSync('/dev/stdin').toString();
 let input = `3
