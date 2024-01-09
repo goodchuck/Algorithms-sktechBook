@@ -1,3 +1,4 @@
+// 연속합
 var fs = require('fs');
 // var input = fs.readFileSync('/dev/stdin').toString();
 let input = `1
