@@ -1,3 +1,34 @@
+// DFS 재귀 함수 버전
+const DFS2 = (x) => {
+    check[x] = true;
+    for (let i = 1; i <= n; i++) {
+        if (a[x][i] === 1 && check[i] === false) {
+            DFS2(i);
+        }
+    }
+}
+
+const makeAdjacencyMatrix = (N, arrs) => {
+    const AM = Array.from({ length: N + 1 }, () => Array.from({ length: N + 1 }).fill(0));
+    for (let i = 0; i < arrs.length; i++) {
+        let left = arrs[i][0];
+        let right = arrs[i][1];
+        AM[left][right] = 1;
+        AM[right][left] = 1;
+    }
+    return AM;
+}
+
+
+
+
+
+
+
+
+
+
+
 // const graph = {
 //     A: ['B', 'C'],
 //     B: ['A', 'D'],
@@ -10,7 +41,6 @@
 //     I: ['C', 'J'],
 //     J: ['I']
 //   };
-
 
 const DFS = (graph, startNode) => {
     const visited = []; // 탐색을 마친 노드들
